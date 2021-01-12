@@ -57,12 +57,11 @@ const Navbar = (): JSX.Element => {
             </MenuButton>
             <MenuList>
               <MenuGroup title='Profile'>
-                <MenuItem>My Account</MenuItem>
-              </MenuGroup>
-              <MenuDivider />
-              <MenuGroup title='Help'>
-                <MenuItem>Docs</MenuItem>
-                <MenuItem>FAQ</MenuItem>
+                <NextLink href='/my-account'>
+                  <MenuItem>
+                    <Link>My Account</Link>
+                  </MenuItem>
+                </NextLink>
               </MenuGroup>
               <MenuDivider />
               <MenuItem>
