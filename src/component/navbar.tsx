@@ -2,7 +2,9 @@ import { Flex, HStack, Link, Text } from '@chakra-ui/react'
 import NextLink from 'next/link'
 
 import routes from '@/routes'
+import siteConfig from '~/site.config.ts'
 
+import MobileDrawer from './mobile-drawer'
 import ToggleColorMode from './toggle-color-mode'
 
 const Navbar = () => {
@@ -10,17 +12,18 @@ const Navbar = () => {
     <Flex
       as='nav'
       pos='sticky'
-      top={0}
       flexDir='row'
-      px={{ base: 10, md: 20 }}
-      py={8}
-      align='center'
       justify='space-between'
+      align='center'
+      px={{ base: 4, md: 20 }}
+      py={8}
+      top={0}
     >
-      <HStack spacing={6} justify='center'>
-        <Text fontSize='xl' fontWeight='bold'>
-          Sakura
-        </Text>
+      <Text fontSize='xl' fontWeight='bold'>
+        {siteConfig.title}
+      </Text>
+
+      <HStack d={{ base: 'none', md: 'flex' }} spacing={6}>
         {routes.map(([text, href]) => (
           <div key={href}>
             <NextLink href={href} key={href}>
@@ -28,13 +31,10 @@ const Navbar = () => {
             </NextLink>
           </div>
         ))}
-      </HStack>
-      <HStack spacing={6}>
-        <NextLink href='/login'>
-          <Link>Login</Link>
-        </NextLink>
         <ToggleColorMode />
       </HStack>
+
+      <MobileDrawer />
     </Flex>
   )
 }

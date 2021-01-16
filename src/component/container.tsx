@@ -1,8 +1,8 @@
-import { Box } from '@chakra-ui/react'
+import { Box, ContainerProps } from '@chakra-ui/react'
 
-const Container = ({ children }) => {
+const Container = ({ children, ...rest }: ContainerProps) => {
   return (
-    <Box py={4} px={{ base: 10, md: 20 }}>
+    <Box {...rest} px={{ base: 4, md: 20 }}>
       {children}
     </Box>
   )

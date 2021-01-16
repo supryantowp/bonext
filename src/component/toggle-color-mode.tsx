@@ -9,7 +9,7 @@ const ToggleColorMode = () => {
       aria-label='toggler color mode'
       icon={<Icon as={colorMode === 'dark' ? FiMoon : FiSun} />}
       onClick={toggleColorMode}
-      variant='ghost'
+      // variant='ghost'
       borderRadius='full'
     />
   )

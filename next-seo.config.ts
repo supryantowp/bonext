@@ -1,17 +1,22 @@
-import { DefaultSeoProps } from 'next-seo'
+import { DefaultSeoProps, SocialProfileJsonLdProps } from 'next-seo'
 
-import siteConfig from './site-config'
+import siteConfig from './site.config.ts'
 
-const SEO: DefaultSeoProps = {
+export const SEO: DefaultSeoProps = {
   openGraph: {
     type: 'website',
     locale: 'en_ID',
     url: siteConfig.url,
     site_name: siteConfig.title,
   },
-  title: siteConfig.title,
+  title: 'Welcome!',
   titleTemplate: `%s • ${siteConfig.title}`,
   description: siteConfig.description,
 }
 
-export default SEO
+export const SocialsProfileSEO: SocialProfileJsonLdProps = {
+  type: 'person',
+  name: siteConfig.title,
+  url: siteConfig.url,
+  sameAs: Object.values(siteConfig.socials),
+}
