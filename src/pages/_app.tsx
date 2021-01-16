@@ -8,7 +8,7 @@ import Footer from '@/component/footer'
 import Navbar from '@/component/navbar'
 import theme from '@/theme'
 import { SEO, SocialsProfileSEO } from '~/next-seo.config'
-import siteConfig from '~/site.config.ts'
+import siteConfig from '~/site.config'
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (

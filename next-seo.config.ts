@@ -1,6 +1,6 @@
 import { DefaultSeoProps, SocialProfileJsonLdProps } from 'next-seo'
 
-import siteConfig from './site.config.ts'
+import siteConfig from './site.config'
 
 export const SEO: DefaultSeoProps = {
   openGraph: {

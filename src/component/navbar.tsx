@@ -2,7 +2,7 @@ import { Flex, HStack, Link, Text } from '@chakra-ui/react'
 import NextLink from 'next/link'
 
 import routes from '@/routes'
-import siteConfig from '~/site.config.ts'
+import siteConfig from '~/site.config'
 
 import MobileDrawer from './mobile-drawer'
 import ToggleColorMode from './toggle-color-mode'

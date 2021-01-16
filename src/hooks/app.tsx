@@ -1,7 +1,7 @@
-import { FaGithub, FaTwitter } from 'react-icons/fa'
 import { IconType } from 'react-icons/lib'
+import { FaGithub, FaTwitter } from 'react-icons/fa'
 
-import siteConfig from '~/site.config.ts'
+import siteConfig from '~/site.config'
 
 export const useSocialMedia = () => {
   const socials: [string, IconType][] = [

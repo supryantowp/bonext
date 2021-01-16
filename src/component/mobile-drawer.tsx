@@ -15,7 +15,7 @@ import NextLink from 'next/link'
 import { AiOutlineMenu } from 'react-icons/ai'
 
 import routes from '@/routes'
-import siteConfig from '~/site.config.ts'
+import siteConfig from '~/site.config'
 
 import ToggleColorMode from './toggle-color-mode'
 
