@@ -6,7 +6,7 @@ import siteConfig from '~/site.config'
 
 const Index = () => (
   <>
-    <NextSeo title='Bonext' titleTemplate='%' />
+    <NextSeo title='Bonext' titleTemplate='%s' />
     <Container>
       <Heading
         bgGradient='linear(to-l, #7928CA,#FF0080)'
